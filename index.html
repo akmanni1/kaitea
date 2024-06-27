@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+    <head>
+        <title>KaiTea: Vendor of Unique Teas</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Ashante Manning">
+        <meta name="description" content="Shop for Organic Loose Leaf Teas, Tea Bags, and Tea Gifts">
+		<meta name="keywords" content="art, organic, nature, tea, shop">
+        <!-- ~~~~~~~~~~ OPEN GRAPH META TAGS ~~~~~~~~~~ -->
+        <meta property="og:title" content="KaiTea">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://wunderlusttravel.com/images/majorca-cove.png">
+        <meta property="og:url" content="https://wunderlusttravel.com/majorca">
+        <meta property="og:description" content="KaiTea is a psuedo website created by Ashanté to share her ability to 
+			create an interactive website using JavaScript.">
+        <!-- ~~~~~~~~~~ GOOGLE FONTS ~~~~~~~~~~ -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Molle&family=Montserrat&display=swap" rel="stylesheet">
+		<!-- ~~~~~~~~~~ STYLE ~~~~~~~~~~ -->
+		<link href="styles.css" rel="stylesheet">
+		<!-- ~~~~~~~~~~ STYLE ~~~~~~~~~~ -->
+		<script src="shopping.js" defer></script>
+	</head>
+        
+    <body>
+		<a id="skip" href="#main-content">Skip to Main Content</a>
+        <!-- styling skip links: https://webaim.org/techniques/css/invisiblecontent/ -->
+			<header> 
+                <a href="index.html" class="active-page"><h1>KaiTea</h1></a>
+				<nav>
+					<ul>
+						<li><a href="index" class="active-page">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#products">Our Products</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+				
+			<main id="main-content">
+				<section id="about"><h2>About</h2>
+					<p>KaiTea is a novice tea importer based in Richmond, VA that custom blends various organic teas. 
+						Our teas are carefully crafted from naturally grown herbs, each one offering a unique story.<br><br></p>
+					
+					<p>The seeds that formed the foundation of KaiTea were first planted in 2018 when Ashanté (or Kai) began her journey of studying Ayurvedic practices such as yoga and meditation. 
+						She found that consuming tea often aids with achieving mindfulness and is a universally loved beverage. 
+						Since she also became a barista around the same time, she often deals with crafting beverages with unique ingredients. 
+						Each year since, Ashanté aims to create more unique concoctions to express her love of Ayurveda and beverage crafting.<br><br></p>
+					
+					<p>Please browse through our products and look at life through our lens for just a moment.</p>
+				</section>
+				
+				<section id="products"><h2>Our Products</h2>
+				<div>
+					<section class="imgcaption peachTea">
+						<img src="images/peachTea.jpg" alt="Top view of dried peach herbs in teacup">
+						<h3>Peach Niche Tea</h3>
+						<p>$13.00</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+										
+					<section class="imgcaption lavenderTea">
+						<img src="images/lavenderTea.jpg" alt="Top view of lavender herb buds in teacup">
+						<h3>Lavender Tea</h3>
+						<p>$15.99</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+					
+					<section class="imgcaption chamomileTea">
+						<img src="images/chamomileTea.jpg" alt="Top view of chamomile buds in teacup">
+						<h3>Chamomile Tea</h3> 
+						<p>$14.50</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+					
+					<section class="imgcaption goldFlowerTea">
+						<img src="images/goldFlowerTea.jpg" alt="Top view of golden flower buds in teacup">
+						<h3>Golden Flower Tea</h3> 
+						<p>$17.99</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+
+					<section class="imgcaption lavenderCandle">
+						<img src="images/lavenderCandle.jpg" alt="Homemade candle made of lavender surrounded by pinecones outside">
+						<h3>Lavender Candle</h3> 
+						<p>$25.00</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+					
+					<section class="imgcaption lindenTea">
+						<img src="images/lindenTea.jpg" alt="Top view of linden tea in cup">
+						<h3>Linden Tea</h3> 
+						<p>$15.99</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+					
+					<section class="imgcaption monkStatue">
+						<img src="images/monkStatue.jpg" alt="Wooden statue of monk sitting with tea setup">
+						<h3>Monk Statue</h3> 
+						<p>$18.00</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+
+					<section class="imgcaption tradTeapot">
+						<img src="images/traditionalTeapot.jpg" alt="Traditional teapot made of lacquer wood with Mandarin characters">
+						<h3>Traditional Teapot</h3> 
+						<p>$22.50</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+					
+					<section class="imgcaption teaComboSet">
+						<img src="images/teaComboSet.jpg" alt="Tea set which includes two tea cups, a ceramic teapot, and chopsticks">
+						<h3>Tea Combo Set</h3> 
+						<p>$32.99</p>
+						
+						<button id="addCart">Add To Cart</button>
+					</section>
+				</div>
+            	</section>
+
+				<section id="cart"><h2>Your Cart</h2>
+					<div class="totals">
+						<div class="totalItems">
+						  <label>Sub-Total:</label>
+						  <div class="totalValue" id="cartSubtotal">71.97<br></div>
+						</div>
+
+						<div class="totalItems">
+						  <label>Tax Rate:</label>
+						  <div class="totalValue" id="cartTax">6% Tax<br></div>
+						</div>
+
+						<div class="totalItems">
+						  <label>Shipping:</label>
+						  <div class="totalValue" id="cartShipping">15.00<br></div>
+						</div>
+
+						<div class="totalItems totalItemsTotal">
+						  <label>Cart Total:</label>
+						  <div class="totalValue" id="cartTotal">90.57<br></div>
+						</div>
+					</div>
+					
+					<button class="checkout">Check Out</button>
+				</section>
+
+				<section id="contact"><h2>Contact <span class="form-required">*required</span></h2>
+					<p>If you have any questions or want to connect with Ashanté regarding any tea recipes, accessories, or just give any suggestions, please fill out this form below.</p>
+					
+					<form id="newMessage" target="_blank" method="GET" action="https://wp.zybooks.com/form-viewer.php">
+					
+						<label for="firstName">First Name<span class="required">*</span></label>
+						<input id="firstName" type="text" name="firstName" autocomplete="given-name" required><br>
+						
+						<label for="lastName">Last Name<span class="required">*</span></label>
+						<input id="lastName" type="text" name="lastName" autocomplete="given-name" required><br>
+
+						<label for="myEmail">Email<span class="required">*</span></label>
+						<input id="myEmail" type="email" name="myEmail" required><br>
+						<p class="hidden">Please enter a valid email address</p>
+						
+						<label for="myPhone">Phone<span class="required">*</span></label>
+						<input id="myPhone" type="tel" name="myPhone" required><br>
+						<p class="hidden">Please enter a valid phone number</p>
+			
+						<fieldset>
+							<legend>Preferred Contact Method<span class="required">*</span></legend>
+							
+							<input id="prefPhone" type="radio" name="prefContact" value="Phone">
+							<label for="prefPhone">Phone</label>
+							
+							<input id="prefEmail" type="radio" name="prefContact" value="Email">
+							<label for="prefEmail">Email</label>
+						</fieldset>
+						
+						<label for="myMessage" id="text-block">Comment<span class="required">*</span><br></label>
+						<textarea id="myMessage" name="myMessage" required></textarea><br>
+						<p id="messageError" class="hidden">You must enter a comment above to submit</p>
+						
+						<input type="submit" name="mySubmit" id="mySubmit" value="Submit">
+					</form>
+					<p id="confirm" class="hidden"></p>
+				</section>
+            </main>
+			                        
+            <footer>
+                &copy;2024 KaiTea<br>
+            </footer>
+    </body>
+
+</html>

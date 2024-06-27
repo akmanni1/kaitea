@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Molle&family=Montserrat&display=swap');
+
+/* 	http://meyerweb.com/eric/tools/css/reset/ v2.0 
+	License: none (public domain) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*---------- MOBILE FIRST / SMALL GLOBAL SCREENS ----------*/
+:root {
+    font-size: 16px;
+	--font1: 'Molle', cursive;
+	--font2: 'Kdam Thmor Pro', sans-serif;
+    --font3: 'Montserrat', sans-serif;
+    /*  Color Palette */
+    --yellow: #FFD54F;    
+    --purple: #812A6B;
+    --green: #68BD45;
+	--bright-red: #EA372F;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* ----- SKIP LINK ----- */
+#skip {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}  
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* ----- BODY STYLES ----- */
+html {
+	background-color: var(--dark-gray);	
+}
+body {
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    font-family: var(--font3);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----- HEADER STYLES ----- */
+header {
+	position: relative;
+	width: 900px;
+	height: 200px;
+	background-color: var(--purple);
+	background-image: url(images/kaiteaWebHeader.jpg);
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+header a {
+    text-decoration: none;
+}
+
+/* ----- HEADING STYLES ----- */
+h1 {
+	height: 80px;
+	padding-top: 40px;
+    color: var(--light-gray);
+	font-size: 350%;
+	font-family: var(--font1);
+	visibility: hidden;
+}
+h2 {
+    font-size: 150%;
+    margin-bottom: 5px;
+	padding-left: 20px;
+}
+h3 {
+	font-size: 150%;
+    margin: 0 20px;
+	padding-left: 20px;
+}
+h2, h3 {
+	font-family: var(--font2);
+}
+
+/* ----- NAVIGATION STYLES ----- */
+nav {
+	margin: 0 auto;
+    border-top: 1px solid var(--dark-gray);
+    border-bottom: 3px solid var(--yellow);
+    background-color: var(--black);
+	position: relative;
+	top: 40px;
+	z-index: 1;
+}
+ul {
+    font-weight: bold;
+}
+nav li {
+    list-style-type: none;
+    display: inline-flex;
+    padding: 10px 30px;
+}
+nav a {
+    display: inline;
+    padding: 8px 10px;
+    color: var(--green);
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: var(--bright-red);
+    color: var(--dark-gray);
+	padding: 2px auto;
+} 
+.active-page {
+  background-color: var(--purple);
+  color: var(--dark-gray);
+}
+
+/* ----- MAIN STYLES ----- */
+main {
+    margin: 0 auto;
+}
+section li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+}
+p {
+    padding: 0 20px;
+}
+#about, #contact {
+    padding: 2rem;
+    background-color: var(--light-gray);
+}
+.hidden {
+    visibility: hidden;
+    height: 1.5rem;
+    margin: 0.5rem 0rem 0rem 0rem;
+}
+
+/* ----- PRODUCTS SECTION STYLES ----- */
+#products {
+    padding: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-top: 3px solid var(--yellow);
+	border-bottom: 3px solid var(--yellow);
+}
+#products div {
+    display: grid;
+    margin: 5px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+#products img {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+#products section {
+    display: block; 
+    position: relative; 
+    margin: 0 auto;
+}
+#products h3 {
+    margin-top: 10px;
+    font-size: 120%;
+}
+.imgcaption {
+    background-color: var(--black);
+	color: var(--white);
+	text-align: center;
+    bottom: 5px;
+    left: 5px;
+}
+
+/* ----- CONTACT SECTION STYLES ----- */
+form {
+    margin: 10px auto;
+	padding: 10px;
+	border: 2px solid var(--black);
+	border-radius: 5px;
+	color: var(--white);
+	background-color: var(--dark-gray);
+	font-family: var(--font2);
+}
+label {
+    font-weight: bold;
+    padding: 0px 10px 15px;
+}
+#contact input {
+  display: inline;
+  margin: 0.5rem 0rem;
+  border: 1.5px solid var(--purple);
+  padding: 5px;
+  font-family: var(--font2);
+}
+#firstName, #lastName {
+    width: 315px;
+}
+#myEmail, #myPhone {
+    width: 350px;
+}
+fieldset {
+    width: 350px;
+    border-radius: 5px;
+	padding: 5px;
+	margin: 0 auto;
+}
+legend {
+	margin: 0 auto;
+    color: var(--yellow);
+}
+#prefEmail, #prefPhone {
+    display: inline;
+    width: 20px;
+    height: 18px;
+}
+#myMessage {
+	width: 400px;
+	height: 100px;
+    margin-top: 15px;
+}
+#mySubmit, #addCart, .checkout {
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+	width: 150px;
+}
+.form-required {
+    margin: 0 auto;
+    font-family: var(--font2);
+    font-size: 1rem;
+    font-style: italic;
+}
+.required {
+    color: var(--yellow);
+    font-weight: bold;
+}
+input[type="text"].error, input[type="email"].error{
+    border: 2px solid var(--pink);
+  }
+#messageError, input + span, p ol{
+    color: var(--bright-red);
+  }
+
+/* FOOTER STYLES */
+footer {
+	position: relative;
+    background-color: var(--black);
+    color: var(--green);
+    font-weight: bold;
+	border-top: 3px solid var(--yellow);
+	border-bottom: 1px solid var(--dark-gray);
+	padding: 15px 0px 5px 0px;
+	height: 30px;
+	z-index: 0;
+}
+
+/* MEDIA QUERY FOR SMALL SCREENS AT LEAST 600PX */
+ @media screen and (min-width: 600px) {
+    body, header, nav, main, footer {
+        width: 600px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: center;
+        flex-basis: 130px;
+    }
+    li:nth-of-type(4) {
+        flex-basis: 50px;
+    }
+    main {
+        min-width: 600px;
+    }
+    #products div {
+        grid-template-columns: 1fr;
+        grid-row-gap: 5px;
+    }
+    input {
+        width: 350px;
+    }
+}
+  
+/* MEDIA QUERY FOR SMALL SCREENS AT LEAST 880PX */
+@media screen and (min-width: 880px) {
+    body, nav, header, main, footer {
+        width: 880px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: center;
+        flex-shrink: 0;
+        flex-basis: 230px;
+    }
+    li:nth-of-type(4) {
+        flex-basis: 100px;
+    }
+    main {
+        min-width: 880px;
+    }
+	#products {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas:
+		"title"
+		"div";
+	}
+	#products h3 {
+		grid-area: title;
+	}
+    #products div {
+        grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto 1fr;
+		grid-column-gap: 5px;
+        grid-row-gap: 10px;
+		grid-area: div;
+		grid-template-areas:
+		"peachTea lavenderTea"
+		"chamomileTea goldFlowerTea"
+		"lavenderCandle lindenTea"
+        "monkStatue" "monkStatue"
+		"traditionalTeapot teaComboSet";
+    }
+	input {
+        width: 700px;
+    }
+}
+/* MEDIA QUERY FOR SCREEN AND MIN-WIDTH OF 1280PX */
+@media screen and (min-width: 1280px) {
+    body, nav, header, main, footer {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    nav li {
+        justify-content: right;
+        flex-shrink: 0;
+        flex-basis: 250px;
+    }
+    li:nth-of-type(4) {
+        flex-basis: 100px;
+    }
+    main {
+        max-width: 1000px;
+    }
+    #products div {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 100px;
+    }
+    /* .peachTea {
+        bottom: 0px;
+		left: -50px;
+    }
+    .lavenderTea {
+        bottom: 0px;
+		left: 0px;
+    }
+    .chamomileTea {
+        bottom: 0px;
+		left: 15px;
+		padding: 20px 70px;
+    }
+    .goldFlowerTea {
+        bottom: 0px;
+		left: 0px;
+    }
+    .lavenderCandle {
+        bottom: 0px;
+		left: -15px;
+    }
+    .lindenTea {
+        bottom: 0px;
+		left: 0px;
+    }
+    .traditionalTeapot {
+        bottom: 0px;
+		left: -25px;
+    }
+    .teaComboSet {
+        bottom: 0px;
+		left: 0px;
+    }
+    .monkStatue {
+        bottom: 0px;
+		left: -20px;
+    } */
+    #cart, #products {
+        position: relative;
+    }
+    #cart {
+        width: 30%;
+        bottom: 638px;
+        left: 730px;
+    }
+    #products {
+        width: 70%;
+    }
+    input {
+        width: 750px;
+    }
+}
