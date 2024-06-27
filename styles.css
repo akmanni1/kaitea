@@ -157,7 +157,7 @@ nav a {
 nav a:hover {
     background-color: var(--bright-red);
     color: var(--dark-gray);
-	padding: 2px auto;
+	padding: 2px;
 } 
 .active-page {
   background-color: var(--purple);
