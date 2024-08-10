@@ -92,6 +92,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.dark-mode {
+    background-color: var(--black);
+    color: var(--white);
+}
 
 /* ----- HEADER STYLES ----- */
 header {
@@ -105,6 +109,9 @@ header {
 }
 header a {
     text-decoration: none;
+}
+.dark-mode header {
+    background-color: var(--purple);
 }
 
 /* ----- HEADING STYLES ----- */
@@ -140,7 +147,12 @@ nav {
 	top: 40px;
 	z-index: 1;
 }
-ul {
+.dark-mode nav {
+    border-top: 1px solid var(--dark-gray);
+    border-bottom: 3px solid var(--yellow);
+    background-color: var(--black);
+}
+nav ul {
     font-weight: bold;
 }
 nav li {
@@ -154,19 +166,39 @@ nav a {
     color: var(--green);
     text-decoration: none;
 }
+.dark-mode nav a {
+    color: var(--green);
+}
 nav a:hover {
     background-color: var(--bright-red);
     color: var(--dark-gray);
 	padding: 2px;
+}
+.dark-mode nav a:hover{
+    background-color: var(--bright-red);
+    color: var(--dark-gray);
 } 
 .active-page {
   background-color: var(--purple);
   color: var(--dark-gray);
 }
+.dark-mode .active-page {
+    background-color: var(--purple);
+    color: var(--dark-gray);
+}
+nav button{
+    width: 130px;
+    height: 40px;
+    border: 1.5px solid var(--dark-gray);
+}
 
 /* ----- MAIN STYLES ----- */
 main {
+    background-color: var(--light-gray);
     margin: 0 auto;
+}
+.dark-mode main {
+    background-color: var(--dark-gray);
 }
 section li {
     list-style-type: none;
@@ -176,14 +208,25 @@ section li {
 p {
     padding: 0 20px;
 }
-#about, #contact {
-    padding: 2rem;
-    background-color: var(--light-gray);
-}
 .hidden {
     visibility: hidden;
     height: 1.5rem;
     margin: 0.5rem 0rem 0rem 0rem;
+}
+button {
+    cursor: pointer;
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* ----- ABOUT SECTION STYLES ----- */
+#about {
+    padding: 3rem;
+    background-color: var(--light-gray);
+}
+.dark-mode #about {
+    background-color: var(--dark-gray);
 }
 
 /* ----- PRODUCTS SECTION STYLES ----- */
@@ -193,6 +236,7 @@ p {
     color: var(--white);
     border-top: 3px solid var(--yellow);
 	border-bottom: 3px solid var(--yellow);
+    overflow: hidden;
 }
 #products div {
     display: grid;
@@ -201,19 +245,23 @@ p {
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
-#products img {
-    width: 100%;
-    height: auto;
-    z-index: 0;
-}
 #products section {
     display: block; 
     position: relative; 
     margin: 0 auto;
 }
+#products img {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
 #products h3 {
     margin-top: 10px;
     font-size: 120%;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease;
 }
 .imgcaption {
     background-color: var(--black);
@@ -221,9 +269,28 @@ p {
 	text-align: center;
     bottom: 5px;
     left: 5px;
+    flex: 0 0 100%;
+}
+.product-button {
+    margin: 5px auto;
+}
+
+/* ----- CART SECTION STYLES ----- */
+#cart {
+    background-color: var(--light-gray);
+    display: block; 
+    position: relative; 
+    margin: 0 auto;
+}
+.dark-mode #cart {
+    background-color: var(--dark-gray);
 }
 
 /* ----- CONTACT SECTION STYLES ----- */
+#contact {
+    padding: 2rem 4rem;
+    background-color: var(--light-gray);
+}
 form {
     margin: 10px auto;
 	padding: 10px;
@@ -236,6 +303,9 @@ form {
 label {
     font-weight: bold;
     padding: 0px 10px 15px;
+}
+.dark-mode #contact {
+    background-color: var(--dark-gray);
 }
 #contact input {
   display: inline;
@@ -270,13 +340,16 @@ legend {
 	height: 100px;
     margin-top: 15px;
 }
-#mySubmit, #addCart, .checkout {
+#mySubmit, #addCart, .checkout, #myWeatherSubmit {
     background-color: var(--purple);
     color: var(--white);
     font-weight: bold;
     text-transform: uppercase;
-    border: none;
-	width: 150px;
+	width: 120px;
+    margin: 5px auto;
+}
+#mySubmit {
+    cursor: pointer;
 }
 .form-required {
     margin: 0 auto;
@@ -289,11 +362,34 @@ legend {
     font-weight: bold;
 }
 input[type="text"].error, input[type="email"].error{
-    border: 2px solid var(--pink);
+    border: 2px solid var(--bright-red);
   }
-#messageError, input + span, p ol{
+#messageError, input + span, p ol {
     color: var(--bright-red);
-  }
+}
+
+/* ----- WEATHER SECTION STYLES ----- */
+#weather {
+    padding: 2rem 4rem;
+    background-color: var(--light-gray);
+}
+#weather form {
+    margin: 10px auto;
+	padding: 10px;
+	border: 2px solid var(--black);
+	border-radius: 5px;
+	color: var(--white);
+	background-color: var(--dark-gray);
+	font-family: var(--font2);
+}
+#myWeatherSubmit {
+    width: 200px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.dark-mode #weather {
+    background-color: var(--dark-gray);
+}
 
 /* FOOTER STYLES */
 footer {
@@ -442,11 +538,14 @@ footer {
     }
     #cart {
         width: 30%;
-        bottom: 638px;
-        left: 730px;
+        height: 100%;
+        bottom: 640px;
+        padding: 35px 0.5px;
+        float: right;
+        text-align: center;
     }
     #products {
-        width: 70%;
+        width: 60%;
     }
     input {
         width: 750px;
