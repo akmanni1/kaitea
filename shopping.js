@@ -19,25 +19,25 @@ function showSlide(index) {
   }
   $carousel.css("transform", `translateX(-${currentIndex * 100}%)`);
 }
-// Adding previous and next buttons
-if ($nextButton.length && $prevButton.length) {
-  $nextButton.click(function() {
-    currentIndex++;
-    showSlide(currentIndex);
-  });
+// // Adding previous and next buttons
+// if ($nextButton.length && $prevButton.length) {
+//   $nextButton.click(function() {
+//     currentIndex++;
+//     showSlide(currentIndex);
+//   });
   
-  $prevButton.click(function() {
-    currentIndex--;
-    showSlide(currentIndex);
-  });
-}
-// Changes slide every 3 seconds
-const autoAdvanceInterval = 3000;
+//   $prevButton.click(function() {
+//     currentIndex--;
+//     showSlide(currentIndex);
+//   });
+// }
+// // Changes slide every 3 seconds
+// const autoAdvanceInterval = 3000;
 
-setInterval(function() {
-  currentIndex++;
-  showSlide(currentIndex);
-}, autoAdvanceInterval);
+// setInterval(function() {
+//   currentIndex++;
+//   showSlide(currentIndex);
+// }, autoAdvanceInterval);
 
 // Form validation
 function validateForm(event){
@@ -80,7 +80,7 @@ function validateForm(event){
   let errors = "<ul>";
   let isValid = true;
   
-  // validation of inputs
+  // Validation of inputs
   if(!(emailRegex.test(email.value))){
     // Changes boolean flag because the form is not valid
     isValid = false;
